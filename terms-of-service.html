@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Decision Book</title>
+    <meta name="description" content="Terms of Service for Decision Book, a college admissions research app for high school students.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0C0F14;
+            --bg-card: #13161D;
+            --bg-card-hover: #191D27;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-accent: rgba(56, 211, 195, 0.25);
+            --text: #E8EAED;
+            --text-muted: #8B919A;
+            --text-dim: #5A6170;
+            --accent: #38D3C3;
+            --accent-glow: rgba(56, 211, 195, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(12, 15, 20, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-family: 'JetBrains Mono', monospace;
+            text-decoration: none;
+            transition: color 0.18s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--accent);
+        }
+
+        /* PAGE HEADER */
+        header.page-header {
+            padding: 84px 0 48px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .kicker {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 0.98;
+            margin-bottom: 16px;
+        }
+
+        .last-updated {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* LEGAL BODY */
+        .legal-body {
+            padding: 56px 0 96px;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .legal-body .summary {
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin: 28px 0 44px;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .legal-body .summary strong {
+            color: var(--accent);
+        }
+
+        .legal-body h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin: 44px 0 14px;
+            padding-top: 8px;
+        }
+
+        .legal-body h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 28px 0 10px;
+        }
+
+        .legal-body p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .legal-body ul {
+            margin: 10px 0 20px 20px;
+            color: var(--text);
+        }
+
+        .legal-body li {
+            margin-bottom: 10px;
+        }
+
+        .legal-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .legal-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(56, 211, 195, 0.4);
+            transition: border-color 0.18s ease;
+        }
+
+        .legal-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .legal-body .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin-bottom: 44px;
+        }
+
+        .legal-body .toc-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .legal-body .toc ol {
+            list-style: none;
+            counter-reset: toc;
+            padding: 0;
+        }
+
+        .legal-body .toc li {
+            counter-increment: toc;
+            margin-bottom: 6px;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .legal-body .toc li::before {
+            content: counter(toc, decimal-leading-zero);
+            position: absolute;
+            left: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        .legal-body .toc a {
+            border-bottom: none;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .legal-body .toc a:hover {
+            color: var(--accent);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-text {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.18s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            header.page-header {
+                padding: 56px 0 36px;
+            }
+            .legal-body {
+                padding: 40px 0 72px;
+                font-size: 15px;
+            }
+            .legal-body h2 {
+                font-size: 21px;
+                margin-top: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-logo">srihan<span>.dev</span></a>
+            <a href="/" class="nav-back">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                back
+            </a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="container">
+            <div class="kicker">Decision Book · Legal</div>
+            <h1>Terms of<br>Service</h1>
+            <p class="last-updated">Last updated: April 11, 2026</p>
+        </div>
+    </header>
+
+    <!-- LEGAL BODY -->
+    <section class="legal-body">
+        <div class="container">
+
+            <div class="summary">
+                <strong>Plain English:</strong> Decision Book is a free app for US high school students doing college research. You can use it for personal, non-commercial purposes. The app is provided "as is" — always double-check admissions info, deadlines, and financial numbers with the official source before making real decisions. If something goes wrong, the maximum liability is capped at $100 or any amount you paid us for the app (which is zero, since the app is free).
+            </div>
+
+            <div class="toc">
+                <div class="toc-title">Contents</div>
+                <ol>
+                    <li><a href="#acceptance">Acceptance of these terms</a></li>
+                    <li><a href="#license">License to use the app</a></li>
+                    <li><a href="#restrictions">What you may not do</a></li>
+                    <li><a href="#intellectual-property">Intellectual property</a></li>
+                    <li><a href="#user-content">Your content</a></li>
+                    <li><a href="#price">Price and in-app purchases</a></li>
+                    <li><a href="#responsibility">User responsibility</a></li>
+                    <li><a href="#data-responsibility">Data responsibility</a></li>
+                    <li><a href="#ai-disclaimer">AI and automated output disclaimer</a></li>
+                    <li><a href="#admissions-disclaimer">Admissions information disclaimer</a></li>
+                    <li><a href="#warranty">Disclaimer of warranties</a></li>
+                    <li><a href="#liability">Limitation of liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#law">Governing law</a></li>
+                    <li><a href="#changes">Changes to these terms</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ol>
+            </div>
+
+            <h2 id="acceptance">1. Acceptance of these terms</h2>
+            <p>These Terms of Service ("Terms") are a legal agreement between you and Decision Book, developed by <strong>Srihan Bongula</strong> ("we," "our," or "us"). By downloading, installing, or using Decision Book ("the app"), you agree to be bound by these Terms. If you do not agree to these Terms, do not use the app.</p>
+
+            <h2 id="license">2. License to use the app</h2>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use Decision Book for personal, non-commercial purposes on iOS devices you own or control, subject to these Terms and the <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">Apple App Store Terms of Service</a>.</p>
+
+            <h2 id="restrictions">3. What you may not do</h2>
+            <p>You may not:</p>
+            <ul>
+                <li>Modify, reverse engineer, decompile, or disassemble the app, except to the limited extent permitted by applicable law.</li>
+                <li>Copy, redistribute, republish, sell, lease, license, or sublicense the app or its content.</li>
+                <li>Create derivative works based on the app.</li>
+                <li>Use the app for any unlawful purpose, or in violation of any applicable local, state, national, or international law.</li>
+                <li>Use the app to harass, defraud, or harm any person or organization.</li>
+                <li>Remove or alter any proprietary notices, copyright marks, or trademarks in the app.</li>
+                <li>Use the app in any way that could damage, disable, overburden, or impair the app's functionality.</li>
+                <li>Use automated tools, scripts, or bots to scrape, copy, or extract data from the app.</li>
+            </ul>
+
+            <h2 id="intellectual-property">4. Intellectual property</h2>
+            <p>Decision Book and all related content, features, and functionality — including but not limited to text, graphics, logos, icons, images, UI design, written guides, and software — are owned by Srihan Bongula and are protected by copyright, trademark, and other intellectual property laws.</p>
+            <p>Some screens in Decision Book display or reference data from public third-party sources, including:</p>
+            <ul>
+                <li>The US Department of Education's <a href="https://collegescorecard.ed.gov/" target="_blank" rel="noopener">College Scorecard</a>, a public federal dataset.</li>
+                <li>The National Center for Education Statistics (NCES) Common Core of Data, accessed via the <a href="https://educationdata.urban.org/" target="_blank" rel="noopener">Urban Institute Education Data API</a>.</li>
+                <li>A link-out to <a href="https://apcreditpolicy.collegeboard.org/" target="_blank" rel="noopener">the College Board's official AP Credit Policy Search tool</a>. Decision Book is not affiliated with, endorsed by, or sponsored by the College Board. AP® is a registered trademark of the College Board. SAT® and PSAT/NMSQT® are registered trademarks of the College Board. ACT® is a registered trademark of ACT, Inc.</li>
+            </ul>
+            <p>Third-party materials remain the property of their respective owners. Decision Book is not affiliated with, endorsed by, or sponsored by any college, university, ranking publication, scholarship organization, testing organization, or government agency referenced in the app.</p>
+
+            <h2 id="user-content">5. Your content</h2>
+            <p>Anything you enter into Decision Book — your profile data, saved colleges, notes, and any other content you create — remains yours. Because Decision Book stores user content only on your device and never uploads it to any server, we generally do not receive, process, or have access to your content at all.</p>
+            <p>In the rare case that you voluntarily share content with us (for example, by attaching a screenshot to a support email), you grant us a limited, non-exclusive, royalty-free license to use that content solely for the purpose of responding to your request and improving the app.</p>
+
+            <h2 id="price">6. Price and in-app purchases</h2>
+            <p>Decision Book is offered <strong>free of charge</strong>. It contains no subscriptions, no in-app purchases, and no advertising. We do not charge you for anything inside the app.</p>
+            <p>Optional features (such as downloading an upgraded on-device language model) may use your device's storage and mobile data bandwidth, but we never charge you for them. If you download an optional model over a cellular connection, your mobile carrier may charge you for the data used; that is between you and your carrier.</p>
+
+            <h2 id="responsibility">7. User responsibility</h2>
+            <p>You are solely responsible for all decisions, actions, and outcomes resulting from your use of the app. Decision Book provides research, organizational, and productivity tools for educational purposes only.</p>
+            <p>You acknowledge that you are responsible for reviewing and verifying all data, calculations, suggestions, and outputs generated by the app before relying on them for any educational, admissions, financial, or other significant decision.</p>
+
+            <h2 id="data-responsibility">8. Data responsibility</h2>
+            <p>Decision Book stores all profile data locally on your device. There is no cloud backup, no server sync, and no cross-device sync. If you delete the app, lose your device, or your device is damaged, your Decision Book profile data will be lost. You are responsible for writing down or screenshotting any information you want to keep outside the app.</p>
+            <p>We are not liable for any loss of profile data, saved colleges, notes, or any other information stored within the app.</p>
+
+            <h2 id="ai-disclaimer">9. AI and automated output disclaimer</h2>
+            <p>Decision Book uses on-device language models to generate suggestions, summaries, and qualitative guidance about colleges, majors, and admissions. These outputs are generated by software running on your device and may be inaccurate, incomplete, outdated, or unsuitable for your specific situation.</p>
+            <p>You should independently verify any AI-generated output before relying on it, particularly when making admissions, financial, or other significant decisions. Decision Book does not provide professional admissions counseling, financial advice, legal advice, or any other professional advice.</p>
+
+            <h2 id="admissions-disclaimer">10. Admissions information disclaimer</h2>
+            <p>Decision Book displays information about colleges, majors, scholarships, summer programs, admissions strategies, and related topics for research and educational purposes only. This information is compiled from public data sources and general guidance; it is not a substitute for official information from the institutions involved.</p>
+            <p>Specifically, Decision Book <strong>does not guarantee</strong>:</p>
+            <ul>
+                <li>Admission to any college or university.</li>
+                <li>Eligibility for any scholarship or financial aid.</li>
+                <li>Acceptance into any summer program.</li>
+                <li>The accuracy of admissions statistics, deadlines, tuition, financial aid, AP credit policies, or scholarship details.</li>
+                <li>Any particular academic, career, or financial outcome.</li>
+            </ul>
+            <p>Always confirm admissions requirements, deadlines, financial aid information, AP credit policies, and scholarship details <strong>directly with the relevant institutions</strong> before taking action. When the information in the app differs from the information on the institution's official website, trust the institution.</p>
+            <p>For personalized admissions guidance, consult your high school counselor or a licensed independent educational consultant.</p>
+
+            <h2 id="warranty">11. Disclaimer of warranties</h2>
+            <p>Decision Book is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express, implied, statutory, or otherwise. We do not warrant that the app will be uninterrupted, error-free, accurate, reliable, or free of harmful components. To the fullest extent permitted by law, we disclaim all warranties, including any implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+            <h2 id="liability">12. Limitation of liability</h2>
+            <p>To the maximum extent permitted by law, the total liability of Decision Book, Srihan Bongula, and any affiliates for any claims arising out of or relating to your use of the app shall not exceed the greater of:</p>
+            <ul>
+                <li>(a) the amount you have paid us for the app during the twelve (12) months preceding the claim, or</li>
+                <li>(b) one hundred U.S. dollars ($100).</li>
+            </ul>
+            <p>Since the app is free, the amount in (a) is zero, meaning the practical cap is $100.</p>
+            <p>Under no circumstances shall we be liable for any indirect, incidental, consequential, special, exemplary, or punitive damages, including but not limited to loss of profits, loss of data, loss of saved colleges, business interruption, missed admissions deadlines, rejected applications, or any financial loss arising from your use of or inability to use the app.</p>
+
+            <h2 id="indemnification">13. Indemnification</h2>
+            <p>You agree to indemnify, defend, and hold harmless Srihan Bongula and Decision Book from any claims, liabilities, damages, losses, or expenses (including reasonable legal fees) arising from your use of the app, your violation of these Terms, or your violation of any rights of a third party.</p>
+
+            <h2 id="termination">14. Termination</h2>
+            <p>We may terminate or suspend your access to Decision Book at any time, without prior notice, for any reason, including if you breach these Terms. You can terminate your use of the app at any time by uninstalling it from your device. Upon termination, your right to use the app will immediately cease; sections of these Terms that by their nature should survive termination (such as liability limitations and intellectual property) will continue to apply.</p>
+
+            <h2 id="law">15. Governing law</h2>
+            <p>These Terms are governed by and construed in accordance with the laws of the State of Georgia, United States, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms or your use of the app shall be resolved in the state or federal courts located in Georgia.</p>
+
+            <h2 id="changes">16. Changes to these terms</h2>
+            <p>We reserve the right to modify these Terms at any time. When we do, we will update the "Last updated" date at the top of this page. Material changes will be announced inside the app or on this website. Your continued use of Decision Book after changes are posted constitutes your acceptance of the modified Terms.</p>
+
+            <h2 id="contact">17. Contact</h2>
+            <p>If you have any questions about these Terms, please contact:</p>
+            <p><strong>Srihan Bongula</strong><br>
+            Email: <a href="mailto:srihan.bongula@gmail.com">srihan.bongula@gmail.com</a></p>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-text">&copy; 2026 Srihan Bongula</div>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms-of-service.html">Terms</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

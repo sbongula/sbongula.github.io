@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Decision Book</title>
+    <meta name="description" content="Privacy Policy for Decision Book, a college admissions research app for high school students.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #0C0F14;
+            --bg-card: #13161D;
+            --bg-card-hover: #191D27;
+            --border: rgba(255, 255, 255, 0.06);
+            --border-accent: rgba(56, 211, 195, 0.25);
+            --text: #E8EAED;
+            --text-muted: #8B919A;
+            --text-dim: #5A6170;
+            --accent: #38D3C3;
+            --accent-glow: rgba(56, 211, 195, 0.12);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(12, 15, 20, 0.85);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+        }
+
+        nav .container {
+            max-width: 1080px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 18px;
+            padding-bottom: 18px;
+        }
+
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .nav-logo span {
+            color: var(--accent);
+        }
+
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 14px;
+            font-family: 'JetBrains Mono', monospace;
+            text-decoration: none;
+            transition: color 0.18s ease;
+        }
+
+        .nav-back:hover {
+            color: var(--accent);
+        }
+
+        /* PAGE HEADER */
+        header.page-header {
+            padding: 84px 0 48px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .kicker {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 0.98;
+            margin-bottom: 16px;
+        }
+
+        .last-updated {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* LEGAL BODY */
+        .legal-body {
+            padding: 56px 0 96px;
+            font-size: 16px;
+            color: var(--text);
+        }
+
+        .legal-body .summary {
+            background: var(--bg-card);
+            border: 1px solid var(--border-accent);
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin: 28px 0 44px;
+            font-size: 15px;
+            color: var(--text);
+        }
+
+        .legal-body .summary strong {
+            color: var(--accent);
+        }
+
+        .legal-body h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--text);
+            margin: 44px 0 14px;
+            padding-top: 8px;
+        }
+
+        .legal-body h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 28px 0 10px;
+        }
+
+        .legal-body p {
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .legal-body ul {
+            margin: 10px 0 20px 20px;
+            color: var(--text);
+        }
+
+        .legal-body li {
+            margin-bottom: 10px;
+        }
+
+        .legal-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .legal-body a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(56, 211, 195, 0.4);
+            transition: border-color 0.18s ease;
+        }
+
+        .legal-body a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .legal-body .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin-bottom: 44px;
+        }
+
+        .legal-body .toc-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .legal-body .toc ol {
+            list-style: none;
+            counter-reset: toc;
+            padding: 0;
+        }
+
+        .legal-body .toc li {
+            counter-increment: toc;
+            margin-bottom: 6px;
+            padding-left: 32px;
+            position: relative;
+        }
+
+        .legal-body .toc li::before {
+            content: counter(toc, decimal-leading-zero);
+            position: absolute;
+            left: 0;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        .legal-body .toc a {
+            border-bottom: none;
+            color: var(--text);
+            font-size: 15px;
+        }
+
+        .legal-body .toc a:hover {
+            color: var(--accent);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        footer .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-text {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.18s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 640px) {
+            header.page-header {
+                padding: 56px 0 36px;
+            }
+            .legal-body {
+                padding: 40px 0 72px;
+                font-size: 15px;
+            }
+            .legal-body h2 {
+                font-size: 21px;
+                margin-top: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-bg"></div>
+
+    <!-- NAV -->
+    <nav>
+        <div class="container">
+            <a href="/" class="nav-logo">srihan<span>.dev</span></a>
+            <a href="/" class="nav-back">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                back
+            </a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="container">
+            <div class="kicker">Decision Book · Legal</div>
+            <h1>Privacy<br>Policy</h1>
+            <p class="last-updated">Last updated: April 11, 2026</p>
+        </div>
+    </header>
+
+    <!-- LEGAL BODY -->
+    <section class="legal-body">
+        <div class="container">
+
+            <div class="summary">
+                <strong>In short:</strong> Decision Book does not collect, store, or transmit any personal information to any server. Everything you enter — your GPA, test scores, high school, activities, saved colleges — stays on your device. There are no user accounts, no analytics, no advertising, and no third-party tracking. This document explains the details.
+            </div>
+
+            <div class="toc">
+                <div class="toc-title">Contents</div>
+                <ol>
+                    <li><a href="#who-we-are">Who we are</a></li>
+                    <li><a href="#data-collected">What data we collect</a></li>
+                    <li><a href="#where-data-lives">Where your data lives</a></li>
+                    <li><a href="#external-services">External services Decision Book connects to</a></li>
+                    <li><a href="#on-device-ai">On-device AI</a></li>
+                    <li><a href="#analytics">Analytics, advertising, and tracking</a></li>
+                    <li><a href="#data-sharing">Data sharing and sale</a></li>
+                    <li><a href="#childrens-privacy">Children's privacy</a></li>
+                    <li><a href="#your-rights">Your rights</a></li>
+                    <li><a href="#data-deletion">Deleting your data</a></li>
+                    <li><a href="#security">Security</a></li>
+                    <li><a href="#changes">Changes to this policy</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ol>
+            </div>
+
+            <h2 id="who-we-are">1. Who we are</h2>
+            <p>Decision Book is a free iOS app that helps US high school students research colleges, track applications, and plan their admissions journey. It is developed by <strong>Srihan Bongula</strong>, a high school student in Georgia.</p>
+            <p>In this Privacy Policy, "Decision Book," "the app," "we," "our," and "us" all refer to Decision Book and the individual who develops and maintains it. When we say "you" or "your," we mean the person using the app.</p>
+
+            <h2 id="data-collected">2. What data we collect</h2>
+            <p><strong>Decision Book does not collect any personal information.</strong> There is no account system. You do not sign up, create a username, or provide an email to use the app.</p>
+            <p>The information you enter into the app — your GPA (unweighted and weighted), SAT and ACT scores, graduation year, state of residency, income bracket, high school name and county, list of AP and IB courses, extracurricular activities, intended majors, and saved colleges — is stored only on your device. None of this information is ever transmitted to any server operated by us, because we do not operate any servers.</p>
+            <p>When Decision Book makes network requests (see Section 4 below), those requests contain only the specific data needed to fetch public information — for example, a college name you are searching for. They never include your GPA, test scores, or any other profile field.</p>
+
+            <h2 id="where-data-lives">3. Where your data lives</h2>
+            <p>All of your profile data is stored <strong>locally on your device</strong> using iOS's standard AsyncStorage system. There is:</p>
+            <ul>
+                <li>No cloud database operated by Decision Book.</li>
+                <li>No iCloud sync.</li>
+                <li>No cross-device sync of any kind.</li>
+                <li>No backup of your profile data to any server.</li>
+            </ul>
+            <p>If you delete the app from your device, your profile data is deleted along with it. If you install Decision Book on a new device, you will start with an empty profile.</p>
+
+            <h2 id="external-services">4. External services Decision Book connects to</h2>
+            <p>Decision Book reaches out to a small number of public, third-party services to fetch information about colleges. None of these services receive any of your personal profile data. They receive only the specific query (for example, "Stanford University") plus standard network metadata such as your IP address, which those services may log on their own side.</p>
+
+            <h3>4.1 US Department of Education — College Scorecard API</h3>
+            <p>When you search for a college, Decision Book queries the <a href="https://collegescorecard.ed.gov/data/api-documentation" target="_blank" rel="noopener">College Scorecard API</a> at <code>api.data.gov</code>, a public federal dataset maintained by the US Department of Education. The request contains your search term (a college name or filter) and standard network metadata. The federal government may log the request on its side in accordance with its own public privacy notices.</p>
+
+            <h3>4.2 Urban Institute — Education Data API</h3>
+            <p>When you pick your high school in the profile, Decision Book fetches the list of high schools in your state from the <a href="https://educationdata.urban.org/documentation/" target="_blank" rel="noopener">Urban Institute Education Data API</a>, which serves the National Center for Education Statistics (NCES) Common Core of Data. The request contains only your selected state code. No personal information is sent.</p>
+
+            <h3>4.3 The College Board — AP Credit Policy Search (link-out only)</h3>
+            <p>Decision Book includes an "AP Credit Finder" feature that opens your device's web browser to the <a href="https://apcreditpolicy.collegeboard.org/" target="_blank" rel="noopener">College Board's official AP Credit Policy Search tool</a>. Decision Book itself does not fetch, cache, or display AP credit data inside the app — it is simply a link-out to the College Board's public website. Decision Book is not affiliated with, endorsed by, or sponsored by the College Board. AP® is a registered trademark of the College Board.</p>
+
+            <h3>4.4 Hugging Face (optional, user-initiated only)</h3>
+            <p>Decision Book ships with a small default on-device language model built into the app. If — and only if — you explicitly choose to download a larger optional model from inside the app's settings, Decision Book will download that model file from <a href="https://huggingface.co/" target="_blank" rel="noopener">Hugging Face</a>'s public model repository. No personal information is sent in the request; it is simply a public file download.</p>
+
+            <h2 id="on-device-ai">5. On-device AI</h2>
+            <p>Decision Book uses small language models that run <strong>entirely on your device</strong>. When the app shows AI-generated guidance about a college or major, the model is running locally on your iPhone or iPad — no prompts, no responses, no profile data are ever sent to a cloud AI service.</p>
+            <p>Decision Book does not use OpenAI, Anthropic, Google Gemini, or any other cloud-based AI service. If a feature in the app ever requires sending a prompt to a remote AI service, this Privacy Policy will be updated to disclose that, and the feature will be clearly marked.</p>
+
+            <h2 id="analytics">6. Analytics, advertising, and tracking</h2>
+            <p><strong>Decision Book contains no third-party analytics, crash reporting, advertising, or tracking SDKs.</strong> Specifically, Decision Book does not include any of the following:</p>
+            <ul>
+                <li>Google Analytics, Firebase Analytics, or Google Ads</li>
+                <li>Meta / Facebook SDK or pixel</li>
+                <li>Mixpanel, Amplitude, Segment, or PostHog</li>
+                <li>Sentry, Bugsnag, or Crashlytics</li>
+                <li>AppsFlyer, Adjust, Branch, or any attribution network</li>
+                <li>TikTok, Snap, Pinterest, or any advertising SDK</li>
+            </ul>
+            <p>Decision Book does not use the iOS Advertising Identifier (IDFA). It does not use any tracking technology as defined by Apple's App Tracking Transparency framework. The <code>PrivacyInfo.xcprivacy</code> manifest bundled with the app declares this.</p>
+
+            <h2 id="data-sharing">7. Data sharing and sale</h2>
+            <p>We do not sell, rent, trade, or otherwise share your personal information with third parties. There is no personal information to share — the app does not collect any in the first place. We have no data to monetize and no interest in doing so.</p>
+
+            <h2 id="childrens-privacy">8. Children's privacy</h2>
+            <p>Decision Book is designed for US high school students, generally ages 13 and up. The app is rated 12+ on the App Store.</p>
+            <p>We do not knowingly collect personal information from children under 13. Because the app does not collect personal information from anyone, it also does not collect personal information from children under 13. If you are a parent or guardian and you believe your child under 13 has somehow provided personal information to us (for example, by emailing us), please contact us at the email address below and we will delete it.</p>
+
+            <h2 id="your-rights">9. Your rights</h2>
+            <p>Depending on where you live, you may have specific rights under data protection laws such as the General Data Protection Regulation (GDPR) in the EU, the California Consumer Privacy Act (CCPA), or similar laws in other jurisdictions. These rights typically include:</p>
+            <ul>
+                <li>The right to know what personal data is collected about you</li>
+                <li>The right to access a copy of that data</li>
+                <li>The right to correct inaccurate data</li>
+                <li>The right to request deletion of your data</li>
+                <li>The right to object to or restrict processing</li>
+                <li>The right to data portability</li>
+                <li>The right not to be sold (or in CCPA terms, "sold" as defined under that law)</li>
+            </ul>
+            <p>Because Decision Book does not collect or store any personal data on any server, there is no personal data for us to access, correct, export, or delete. Your data lives on your device, and you can directly view, edit, or delete it at any time inside the app or by deleting the app.</p>
+
+            <h2 id="data-deletion">10. Deleting your data</h2>
+            <p>To delete all data Decision Book has stored about you, uninstall the app from your device. This removes every profile field, saved college, and preference — nothing is retained anywhere else because nothing was ever sent anywhere else.</p>
+
+            <h2 id="security">11. Security</h2>
+            <p>Your data is protected by your device's built-in security, including the Secure Enclave, device passcode, Face ID or Touch ID (at the OS level, not the app level), and iOS's per-app data sandboxing. Network requests to external services (Section 4) are made over HTTPS using the OS's standard TLS implementation.</p>
+            <p>No method of electronic storage or transmission is 100% secure, and while we use iOS's built-in protections, we cannot guarantee absolute security.</p>
+
+            <h2 id="changes">12. Changes to this policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in the app's features, data flows, or applicable law. When we do, we will update the "Last updated" date at the top of this page. Material changes will also be announced inside the app or on this website. Your continued use of Decision Book after a change takes effect constitutes acceptance of the updated policy.</p>
+
+            <h2 id="contact">13. Contact</h2>
+            <p>If you have questions about this Privacy Policy or Decision Book's data practices, please contact:</p>
+            <p><strong>Srihan Bongula</strong><br>
+            Email: <a href="mailto:srihan.bongula@gmail.com">srihan.bongula@gmail.com</a></p>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-text">&copy; 2026 Srihan Bongula</div>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html">Privacy</a></li>
+                <li><a href="terms-of-service.html">Terms</a></li>
+                <li><a href="/">Home</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
